@@ -1,0 +1,33 @@
+{
+  "root": "libs/web-components",
+  "sourceRoot": "libs/web-components/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/web-components",
+        "main": "libs/web-components/src/index.ts",
+        "tsConfig": "libs/web-components/tsconfig.lib.json",
+        "assets": ["libs/web-components/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/web-components/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web-components"],
+      "options": {
+        "jestConfig": "libs/web-components/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

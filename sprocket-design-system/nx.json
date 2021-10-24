@@ -1,0 +1,65 @@
+{
+  "npmScope": "sprocket-design-system",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "angular-example-site": {
+      "tags": []
+    },
+    "angular-example-site-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-example-site"]
+    },
+    "component-library": {
+      "tags": []
+    },
+    "component-library-e2e": {
+      "tags": [],
+      "implicitDependencies": ["component-library"]
+    },
+    "react-example-site": {
+      "tags": []
+    },
+    "react-example-site-e2e": {
+      "tags": [],
+      "implicitDependencies": ["react-example-site"]
+    },
+    "reference-site": {
+      "tags": []
+    },
+    "reference-site-e2e": {
+      "tags": [],
+      "implicitDependencies": ["reference-site"]
+    }
+  }
+}
