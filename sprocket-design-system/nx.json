@@ -47,6 +47,9 @@
       "tags": [],
       "implicitDependencies": ["component-library"]
     },
+    "design-tokens": {
+      "tags": []
+    },
     "react-example-site": {
       "tags": []
     },
