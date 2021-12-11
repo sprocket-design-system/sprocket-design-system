@@ -6,11 +6,17 @@
     "component-library": "apps/component-library",
     "component-library-e2e": "apps/component-library-e2e",
     "design-tokens": "libs/design-tokens",
+    "design-tokens-doozers": "libs/design-tokens/doozers",
+    "design-tokens-fraggles": "libs/design-tokens/fraggles",
+    "design-tokens-gorgs": "libs/design-tokens/gorgs",
     "react-example-site": "apps/react-example-site",
     "react-example-site-e2e": "apps/react-example-site-e2e",
     "reference-site": "apps/reference-site",
     "reference-site-e2e": "apps/reference-site-e2e",
-    "web-components": "libs/web-components"
+    "web-components": "libs/web-components",
+    "web-components-doozers": "libs/web-components/doozers",
+    "web-components-fraggles": "libs/web-components/fraggles",
+    "web-components-gorgs": "libs/web-components/gorgs"
   },
   "cli": {
     "defaultCollection": "@nrwl/web"

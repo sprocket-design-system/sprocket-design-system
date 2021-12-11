@@ -1,0 +1,31 @@
+{
+  "root": "libs/web-components/gorgs",
+  "sourceRoot": "libs/web-components/gorgs/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/web-components/gorgs/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/web-components/gorgs"
+      ],
+      "options": {
+        "jestConfig": "libs/web-components/gorgs/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": [
+    "web-components"
+  ]
+}
