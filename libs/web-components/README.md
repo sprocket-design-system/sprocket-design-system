@@ -1,7 +1,3 @@
 # web-components
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test web-components` to execute the unit tests via [Jest](https://jestjs.io).
+Shared web components for all brands. Brands will simply wrap these components in their specific design tokens. This leaves the base components open to theming at build time via the brand specific packages or runtime via their parent.

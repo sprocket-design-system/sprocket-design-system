@@ -1,10 +1,7 @@
 # design-tokens-fraggles
 
-This library was generated with [Nx](https://nx.dev).
+Design tokens for the Fraggles of Fraggle Rock
 
-
-## Running unit tests
-
-Run `nx test design-tokens-fraggles` to execute the unit tests via [Jest](https://jestjs.io).
-
-
+## Todo
+- Add design tokens
+- Add build script
