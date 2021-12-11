@@ -1,10 +1,7 @@
 # design-tokens-doozers
 
-This library was generated with [Nx](https://nx.dev).
+Design tokens for the Doozers of Fraggle Rock
 
-
-## Running unit tests
-
-Run `nx test design-tokens-doozers` to execute the unit tests via [Jest](https://jestjs.io).
-
-
+## Todo
+- Add design tokens
+- Add build script

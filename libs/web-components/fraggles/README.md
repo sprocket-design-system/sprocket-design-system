@@ -1,10 +1,6 @@
 # web-components-fraggles
 
-This library was generated with [Nx](https://nx.dev).
+Web components for the Fraggles of Fraggle Rock
 
-
-## Running unit tests
-
-Run `nx test web-components-fraggles` to execute the unit tests via [Jest](https://jestjs.io).
-
-
+## Todo
+- A lot

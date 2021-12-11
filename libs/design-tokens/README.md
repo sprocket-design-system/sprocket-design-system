@@ -1,7 +1,7 @@
 # design-tokens
 
-This library was generated with [Nx](https://nx.dev).
+The build library for all brand design tokens.
 
-## Running unit tests
-
-Run `nx test design-tokens` to execute the unit tests via [Jest](https://jestjs.io).
+## Todo
+- Describe design tokens here
+- Document build process
