@@ -1,0 +1,16 @@
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Optional eslint cache
+.eslintcache
+
+# VSCode
+.vscode-test
+.vscode/settings.json
