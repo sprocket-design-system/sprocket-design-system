@@ -32,37 +32,5 @@
       }
     ]
   },
-  "projects": {
-    "angular-example-site": {
-      "tags": []
-    },
-    "angular-example-site-e2e": {
-      "tags": [],
-      "implicitDependencies": ["angular-example-site"]
-    },
-    "component-library": {
-      "tags": []
-    },
-    "component-library-e2e": {
-      "tags": [],
-      "implicitDependencies": ["component-library"]
-    },
-    "design-tokens": {
-      "tags": []
-    },
-    "react-example-site": {
-      "tags": []
-    },
-    "react-example-site-e2e": {
-      "tags": [],
-      "implicitDependencies": ["react-example-site"]
-    },
-    "reference-site": {
-      "tags": []
-    },
-    "reference-site-e2e": {
-      "tags": [],
-      "implicitDependencies": ["reference-site"]
-    }
-  }
+  "projects": {}
 }
