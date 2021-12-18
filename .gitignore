@@ -14,3 +14,6 @@ node_modules/
 # VSCode
 .vscode-test
 .vscode/settings.json
+
+# Local Netlify folder
+.netlify

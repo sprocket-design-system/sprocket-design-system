@@ -9,6 +9,7 @@
     "design-tokens-doozers": "libs/design-tokens/doozers",
     "design-tokens-fraggles": "libs/design-tokens/fraggles",
     "design-tokens-gorgs": "libs/design-tokens/gorgs",
+    "ngapi": "apps/ngapi",
     "react-example-site": "apps/react-example-site",
     "react-example-site-e2e": "apps/react-example-site-e2e",
     "reference-site": "apps/reference-site",
@@ -16,7 +17,9 @@
     "web-components": "libs/web-components",
     "web-components-doozers": "libs/web-components/doozers",
     "web-components-fraggles": "libs/web-components/fraggles",
-    "web-components-gorgs": "libs/web-components/gorgs"
+    "web-components-gorgs": "libs/web-components/gorgs",
+    "workspace": "apps/workspace",
+    "workspace-e2e": "apps/workspace-e2e"
   },
   "cli": {
     "defaultCollection": "@nrwl/web"
