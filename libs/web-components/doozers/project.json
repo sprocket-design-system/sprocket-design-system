@@ -1,0 +1,31 @@
+{
+  "root": "libs/web-components/doozers",
+  "sourceRoot": "libs/web-components/doozers/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/web-components/doozers/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/web-components/doozers"
+      ],
+      "options": {
+        "jestConfig": "libs/web-components/doozers/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": [
+    "web-components"
+  ]
+}

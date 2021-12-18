@@ -1,0 +1,31 @@
+{
+  "root": "libs/design-tokens/doozers",
+  "sourceRoot": "libs/design-tokens/doozers/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/design-tokens/doozers/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/design-tokens/doozers"
+      ],
+      "options": {
+        "jestConfig": "libs/design-tokens/doozers/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": [
+    "design-tokens"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "root": "apps/reference-site",
+  "sourceRoot": "apps/reference-site/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/reference-site",
+        "index": "apps/reference-site/src/index.html",
+        "baseHref": "/",
+        "main": "apps/reference-site/src/main.tsx",
+        "polyfills": "apps/reference-site/src/polyfills.ts",
+        "tsConfig": "apps/reference-site/tsconfig.app.json",
+        "assets": [
+          "apps/reference-site/src/favicon.ico",
+          "apps/reference-site/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/reference-site/src/environments/environment.ts",
+              "with": "apps/reference-site/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "reference-site:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "reference-site:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/reference-site/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/reference-site"
+      ],
+      "options": {
+        "jestConfig": "apps/reference-site/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

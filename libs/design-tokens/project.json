@@ -1,0 +1,29 @@
+{
+  "root": "libs/design-tokens",
+  "sourceRoot": "libs/design-tokens/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/design-tokens/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/design-tokens"
+      ],
+      "options": {
+        "jestConfig": "libs/design-tokens/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
