@@ -1,0 +1,88 @@
+{
+  "projectType": "application",
+  "root": "apps/workspace",
+  "sourceRoot": "apps/workspace/src",
+  "tags": [
+    "workspace"
+  ],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/workspace",
+        "index": "apps/workspace/src/index.html",
+        "baseHref": "/",
+        "main": "apps/workspace/src/main.ts",
+        "polyfills": "apps/workspace/src/polyfills.ts",
+        "tsConfig": "apps/workspace/tsconfig.app.json",
+        "assets": [
+          "apps/workspace/src/favicon.ico",
+          "apps/workspace/src/assets"
+        ],
+        "styles": [
+          "apps/workspace/src/styles.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/workspace/src/environments/environment.ts",
+              "with": "apps/workspace/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "workspace:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "workspace:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/workspace/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/workspace"
+      ],
+      "options": {
+        "jestConfig": "apps/workspace/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
