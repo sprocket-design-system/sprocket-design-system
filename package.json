@@ -42,6 +42,7 @@
     "@babel/core": "7.12.13",
     "@babel/preset-typescript": "7.12.13",
     "@emotion/babel-plugin": "11.2.0",
+    "@netlify-builder/deploy": "^4.1.2",
     "@nrwl/angular": "^12.10.0",
     "@nrwl/cli": "12.10.0",
     "@nrwl/cypress": "12.10.0",
