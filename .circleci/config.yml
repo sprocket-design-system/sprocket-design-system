@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  deploy:prod:
+  deploy-prod:
     executor:
       name: node/default
     steps:
@@ -13,9 +13,12 @@ jobs:
             - run: export NODE_OPTIONS=--openssl-legacy-provider && npm run affected:deploy --base=<< pipeline.git.base_revision >> --head=HEAD
 
 workflows:
-  deploy:prod:
-    branches:
-      only:
-        - main
+  build:
     jobs:
-      - deploy:prod
+      - deploy-prod:
+        filters:
+          branches:
+            only:
+              - main
+
+
