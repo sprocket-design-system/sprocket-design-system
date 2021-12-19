@@ -7,7 +7,7 @@
     "build": "nx build",
     "affected:deploy": "nx affected --target=deploy --base=main",
     "build:ngapi": "npx nx run ngapi:build",
-    "build:storybook": "npx nx run component-library:build-storybook",
+    "build:storybook": "npx nx run component-library:build",
     "test": "nx test",
     "postinstall": "ngcc --properties es2015 browser module main"
   },

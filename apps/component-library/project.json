@@ -4,45 +4,19 @@
   "sourceRoot": "apps/component-library/src",
   "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nrwl/web:build",
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "uiFramework": "@storybook/angular",
         "outputPath": "dist/apps/component-library",
-        "index": "apps/component-library/src/index.html",
-        "baseHref": "/",
-        "main": "apps/component-library/src/main.ts",
-        "polyfills": "apps/component-library/src/polyfills.ts",
-        "tsConfig": "apps/component-library/tsconfig.app.json",
-        "assets": [
-          "apps/component-library/src/favicon.ico",
-          "apps/component-library/src/assets"
-        ],
-        "styles": ["apps/component-library/src/styles.scss"],
-        "scripts": []
+        "config": {
+          "configFolder": "apps/component-library/.storybook"
+        }
       },
       "configurations": {
-        "production": {
-          "fileReplacements": [
-            {
-              "replace": "apps/component-library/src/environments/environment.ts",
-              "with": "apps/component-library/src/environments/environment.prod.ts"
-            }
-          ],
-          "optimization": true,
-          "outputHashing": "all",
-          "sourceMap": false,
-          "extractCss": true,
-          "namedChunks": false,
-          "extractLicenses": true,
-          "vendorChunk": false,
-          "budgets": [
-            {
-              "type": "initial",
-              "maximumWarning": "2mb",
-              "maximumError": "5mb"
-            }
-          ]
+        "ci": {
+          "quiet": true
         }
       }
     },
@@ -87,26 +61,10 @@
         }
       }
     },
-    "build-storybook": {
-      "executor": "@nrwl/storybook:build",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "uiFramework": "@storybook/angular",
-        "outputPath": "dist/storybook/component-library",
-        "config": {
-          "configFolder": "apps/component-library/.storybook"
-        }
-      },
-      "configurations": {
-        "ci": {
-          "quiet": true
-        }
-      }
-    },
     "deploy": {
       "builder": "@netlify-builder/deploy:deploy",
       "options": {
-        "outputPath": "dist/storybook/component-library",
+        "outputPath": "dist/apps/component-library",
         "siteId": "31c38278-a335-409c-8abb-336873631eeb"
       }
     }
