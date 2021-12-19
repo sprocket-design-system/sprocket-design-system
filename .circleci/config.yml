@@ -1,20 +1,18 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
-
+orbs:
+  node: circleci/node@1.1.6
 jobs:
   build-test-and-deploy:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-executor:
-   name: node/default
-steps:
-  - checkout
-  - node/with-cache:
+    executor:
+      name: node/default
     steps:
-      - run: npm install
-      - run: yarn affected:deploy --base=<< pipeline.git.base_revision >> --head=HEAD
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: yarn affected:deploy --base=<< pipeline.git.base_revision >> --head=HEAD
+
 workflows:
   build-test-and-deploy:
-jobs:
-  - build-test-and-deploy
+    jobs:
+      - build-test-and-deploy
