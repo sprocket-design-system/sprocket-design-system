@@ -6,9 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/web:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/ngapi",
         "index": "apps/ngapi/src/index.html",
@@ -16,13 +14,8 @@
         "main": "apps/ngapi/src/main.ts",
         "polyfills": "apps/ngapi/src/polyfills.ts",
         "tsConfig": "apps/ngapi/tsconfig.app.json",
-        "assets": [
-          "apps/ngapi/src/favicon.ico",
-          "apps/ngapi/src/assets"
-        ],
-        "styles": [
-          "apps/ngapi/src/styles.scss"
-        ],
+        "assets": ["apps/ngapi/src/favicon.ico", "apps/ngapi/src/assets"],
+        "styles": ["apps/ngapi/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -61,22 +54,23 @@
         }
       }
     },
+    "deploy": {
+      "builder": "@netlify-builder/deploy:deploy",
+      "options": {
+        "outputPath": "dist/apps/ngapi",
+        "siteId": "f2231d4d-31c0-4e10-b894-870c78065f5a"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "apps/ngapi/**/*.ts"
-        ]
+        "lintFilePatterns": ["apps/ngapi/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/ngapi"
-      ],
+      "outputs": ["coverage/apps/ngapi"],
       "options": {
         "jestConfig": "apps/ngapi/jest.config.js",
         "passWithNoTests": true

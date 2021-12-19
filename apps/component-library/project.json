@@ -1,27 +1,25 @@
 {
+  "projectType": "application",
   "root": "apps/component-library",
   "sourceRoot": "apps/component-library/src",
-  "projectType": "application",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nrwl/web:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/component-library",
         "index": "apps/component-library/src/index.html",
         "baseHref": "/",
-        "main": "apps/component-library/src/main.tsx",
+        "main": "apps/component-library/src/main.ts",
         "polyfills": "apps/component-library/src/polyfills.ts",
         "tsConfig": "apps/component-library/tsconfig.app.json",
         "assets": [
           "apps/component-library/src/favicon.ico",
           "apps/component-library/src/assets"
         ],
-        "styles": [],
-        "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "styles": ["apps/component-library/src/styles.scss"],
+        "scripts": []
       },
       "configurations": {
         "production": {
@@ -41,8 +39,8 @@
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
             }
           ]
         }
@@ -51,32 +49,24 @@
     "serve": {
       "executor": "@nrwl/web:dev-server",
       "options": {
-        "buildTarget": "component-library:build",
-        "hmr": true
+        "buildTarget": "component-library:build"
       },
       "configurations": {
         "production": {
-          "buildTarget": "component-library:build:production",
-          "hmr": false
+          "buildTarget": "component-library:build:production"
         }
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "apps/component-library/**/*.{ts,tsx,js,jsx}"
-        ]
+        "lintFilePatterns": ["apps/component-library/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/component-library"
-      ],
+      "outputs": ["coverage/apps/component-library"],
       "options": {
         "jestConfig": "apps/component-library/jest.config.js",
         "passWithNoTests": true
@@ -85,7 +75,7 @@
     "storybook": {
       "executor": "@nrwl/storybook:storybook",
       "options": {
-        "uiFramework": "@storybook/react",
+        "uiFramework": "@storybook/angular",
         "port": 4400,
         "config": {
           "configFolder": "apps/component-library/.storybook"
@@ -99,11 +89,9 @@
     },
     "build-storybook": {
       "executor": "@nrwl/storybook:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
-        "uiFramework": "@storybook/react",
+        "uiFramework": "@storybook/angular",
         "outputPath": "dist/storybook/component-library",
         "config": {
           "configFolder": "apps/component-library/.storybook"
@@ -114,7 +102,13 @@
           "quiet": true
         }
       }
+    },
+    "deploy": {
+      "builder": "@netlify-builder/deploy:deploy",
+      "options": {
+        "outputPath": "dist/storybook/component-library",
+        "siteId": "31c38278-a335-409c-8abb-336873631eeb"
+      }
     }
-  },
-  "tags": []
+  }
 }
