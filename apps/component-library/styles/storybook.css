@@ -1,0 +1,56 @@
+/* Styling for Docs */
+body .sbdocs-wrapper {
+  font-family: 'Nunito Sans', -apple-system, '.SFNSText-Regular',
+    'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica,
+    Arial, sans-serif;
+  color: #333333;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.sbdocs-wrapper a {
+  color: #1ea7fd;
+}
+
+.sbdocs-wrapper h1 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 900;
+  margin: 0 0 0.5em 0;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #8995ab;
+}
+
+.sbdocs-wrapper code:not([class^='language-']) {
+  margin: 0;
+  display: inline-block;
+  line-height: 1;
+  margin: 0 2px;
+  padding: 3px 5px;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-size: 13px;
+  border: 1px solid #eeeeee;
+  color: rgba(51, 51, 51, 0.9);
+  background-color: #f8f8f8;
+}
+
+/* Color hacks for MDX */
+.sbdocs-wrapper a[href='x'],
+.sbdocs-wrapper a[href='check'] {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  font-size: 1.75em;
+}
+
+.sbdocs-wrapper a[href='x']:before {
+  color: #fc003b;
+  content: '\2718';
+}
+
+.sbdocs-wrapper a[href='check']:before {
+  color: #189422;
+  content: '\2714';
+}
