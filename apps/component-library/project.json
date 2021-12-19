@@ -87,6 +87,22 @@
         }
       }
     },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "outputPath": "dist/apps/component-library",
+        "config": {
+          "configFolder": "apps/component-library/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
     "deploy": {
       "builder": "@netlify-builder/deploy:deploy",
       "options": {
