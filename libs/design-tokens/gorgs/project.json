@@ -1,0 +1,29 @@
+{
+  "root": "libs/design-tokens/gorgs",
+  "sourceRoot": "libs/design-tokens/gorgs/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/design-tokens/gorgs/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/design-tokens/gorgs"
+      ],
+      "options": {
+        "jestConfig": "libs/design-tokens/gorgs/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

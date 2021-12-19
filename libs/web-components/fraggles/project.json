@@ -1,0 +1,31 @@
+{
+  "root": "libs/web-components/fraggles",
+  "sourceRoot": "libs/web-components/fraggles/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/web-components/fraggles/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/web-components/fraggles"
+      ],
+      "options": {
+        "jestConfig": "libs/web-components/fraggles/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": [
+    "web-components"
+  ]
+}
