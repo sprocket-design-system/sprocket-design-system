@@ -3,8 +3,6 @@
   "projects": {
     "angular-example-site": "apps/angular-example-site",
     "angular-example-site-e2e": "apps/angular-example-site-e2e",
-    "component-library": "apps/component-library",
-    "component-library-e2e": "apps/component-library-e2e",
     "design-tokens": "libs/design-tokens",
     "design-tokens-doozers": "libs/design-tokens/doozers",
     "design-tokens-fraggles": "libs/design-tokens/fraggles",
@@ -64,6 +62,5 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  },
-  "defaultProject": "component-library"
+  }
 }
