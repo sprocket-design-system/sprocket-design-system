@@ -1,0 +1,158 @@
+:root {
+  --primary-50: #f5f9ff;
+  --primary-100: #e8f0ff;
+  --primary-200: #abcaff;
+  --primary-300: #7aabff;
+  --primary-400: #4f90ff;
+  --primary-500: #2977ff;
+  --primary-600: #1f66e0;
+  --primary-700: #003da5;
+  --primary-800: #00235e;
+  --primary-900: #001d4f;
+
+  --secondary-50: #fff7f9;
+  --secondary-100: #ffebef;
+  --secondary-200: #f0bdc9;
+  --secondary-300: #f78ba4;
+  --secondary-400: #f75c80;
+  --secondary-500: #fc003b;
+  --secondary-600: #d50032;
+  --secondary-700: #8a0020;
+  --secondary-800: #540014;
+  --secondary-900: #470011;
+
+  --error-50: #fff7f7;
+  --error-100: #ffebeb;
+  --error-200: #ffb6b5;
+  --error-300: #ff8785;
+  --error-400: #ff5754;
+  --error-500: #fa1511;
+  --error-600: #d12421;
+  --error-700: #8a0200;
+  --error-800: #540100;
+  --error-900: #470100;
+
+  --success-50: #e6ffe8;
+  --success-100: #bfffc5;
+  --success-200: #87de8f;
+  --success-300: #31c43d;
+  --success-400: #00ab0e;
+  --success-500: #189422;
+  --success-600: #157d1e;
+  --success-700: #004f07;
+  --success-800: #002e04;
+  --success-900: #002603;
+
+  --warning-50: #fffae8;
+  --warning-100: #fff0b8;
+  --warning-200: #ebc849;
+  --warning-300: #ff8a54;
+  --warning-400: #f56725;
+  --warning-500: #de4e0b;
+  --warning-600: #c43e00;
+  --warning-700: #732a08;
+  --warning-800: #421b09;
+  --warning-900: #381504;
+
+  --info-50: #defeff;
+  --info-100: #abfeff;
+  --info-200: #00dfe3;
+  --info-300: #17bfc2;
+  --info-400: #00a3a6;
+  --info-500: #138d8f;
+  --info-600: #09797a;
+  --info-700: #004b4d;
+  --info-800: #002b2b;
+  --info-900: #002324;
+
+  --accent-50: #f0fbff;
+  --accent-100: #d9f5ff;
+  --accent-200: #78d6f5;
+  --accent-300: #23b9eb;
+  --accent-400: #009fd4;
+  --accent-500: #0088b5;
+  --accent-600: #03759c;
+  --accent-700: #07485e;
+  --accent-800: #072a36;
+  --accent-900: #09232b;
+
+  --neutral-50: #f7f8fa;
+  --neutral-100: #f0f2f5;
+  --neutral-200: #bfcade;
+  --neutral-300: #9facc2;
+  --neutral-400: #8995ab;
+  --neutral-500: #737f94;
+  --neutral-600: #636d7d;
+  --neutral-700: #384252;
+  --neutral-800: #202630;
+  --neutral-900: #18202e;
+  --neutral-A700: #030a17;
+
+  --common-white: #ffffff;
+  --common-black: #000000;
+
+  --token-component-button-background-color-primary: #003da5;
+  --token-component-button-background-color-primary-hover: #1f66e0;
+  --token-component-button-background-color-primary-disabled: #abcaff;
+  --token-component-button-background-color-secondary: #ffffff;
+  --token-component-button-background-color-secondary-hover: #f0f2f5;
+  --token-component-button-background-color-secondary-disabled: #ffffff;
+  --token-component-button-background-color-link: #ffffff;
+  --token-component-button-background-color-link-hover: #f0f2f5;
+  --token-component-button-background-color-link-disabled: #ffffff;
+  --token-component-button-background-color-destructive: #8a0200;
+  --token-component-button-background-color-destructive-hover: #d12421;
+  --token-component-button-background-color-destructive-disabled: #ffb6b5;
+  --token-component-button-border-color-primary: #003da5;
+  --token-component-button-border-color-primary-hover: #1f66e0;
+  --token-component-button-border-color-primary-disabled: #abcaff;
+  --token-component-button-border-color-secondary: #003da5;
+  --token-component-button-border-color-secondary-hover: #003da5;
+  --token-component-button-border-color-secondary-disabled: #abcaff;
+  --token-component-button-border-color-link: none;
+  --token-component-button-border-color-link-hover: none;
+  --token-component-button-border-color-link-disabled: none;
+  --token-component-button-border-color-destructive: #8a0200;
+  --token-component-button-border-color-destructive-hover: #d12421;
+  --token-component-button-border-color-destructive-disabled: #ffb6b5;
+  --token-component-button-border-radius-small: 4px;
+  --token-component-button-border-radius-normal: 4px;
+  --token-component-button-border-radius-large: 4px;
+  --token-component-button-font-color-primary: #ffffff;
+  --token-component-button-font-color-primary-hover: #ffffff;
+  --token-component-button-font-color-primary-disabled: #ffffff;
+  --token-component-button-font-color-secondary: #003da5;
+  --token-component-button-font-color-secondary-hover: #003da5;
+  --token-component-button-font-color-secondary-disabled: #abcaff;
+  --token-component-button-font-color-link: #003da5;
+  --token-component-button-font-color-link-hover: #003da5;
+  --token-component-button-font-color-link-disabled: #abcaff;
+  --token-component-button-font-color-destructive: #ffffff;
+  --token-component-button-font-color-destructive-hover: #003da5;
+  --token-component-button-font-color-destructive-disabled: #ffffff;
+  --token-component-button-font-size-small: 1rem;
+  --token-component-button-font-size-normal: 1rem;
+  --token-component-button-font-size-large: 1rem;
+  --token-component-button-font-family: Oswald;
+  --token-component-button-font-weight: 700;
+  --token-component-button-font-line-height: 1.65rem;
+  --token-component-button-font-letter-spacing: normal;
+}
+
+.theme-amfam {
+  --token-component-button-background-color-primary: #003da5;
+  --token-component-button-background-color-primary-hover: #1f66e0;
+  --token-component-button-background-color-primary-disabled: #abcaff;
+}
+
+.theme-msa {
+  --token-component-button-background-color-primary: #8a4700;
+  --token-component-button-background-color-primary-hover: #8a5b29;
+  --token-component-button-background-color-primary-disabled: #ebb67e;
+}
+
+.theme-general {
+  --token-component-button-background-color-primary: #438713;
+  --token-component-button-background-color-primary-hover: #679149;
+  --token-component-button-background-color-primary-disabled: #b9df9e;
+}

@@ -92,7 +92,7 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "uiFramework": "@storybook/angular",
-        "outputPath": "dist/storybook/component-library",
+        "outputPath": "dist/apps/component-library",
         "config": {
           "configFolder": "apps/component-library/.storybook"
         }
@@ -106,7 +106,7 @@
     "deploy": {
       "builder": "@netlify-builder/deploy:deploy",
       "options": {
-        "outputPath": "dist/storybook/component-library",
+        "outputPath": "dist/apps/component-library",
         "siteId": "31c38278-a335-409c-8abb-336873631eeb"
       }
     }
